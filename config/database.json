@@ -1,0 +1,57 @@
+[
+  {
+    "id": 1,
+    "title": "The Shawshank Redemption",
+    "category": "Movie",
+    "genre": "Drama",
+    "director": "Frank Darabont",
+    "year": 1994,
+    "imageURL": "https://m.media-amazon.com/images/M/MV5BNDE3ODcxYzMtY2YzZC00NmNlLWJiNDMtZDViZWM2MzIxZDYwXkEyXkFqcGdeQXVyNjAwNDUxODI@._V1_QL75_UX380_CR0,4,380,562_.jpg",
+    "rating": 9.3,
+    "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency."
+  },
+  {
+    "id": 2,
+    "title": "The Godfather",
+    "category": "Movie",
+    "genre": "Crime, Drama",
+    "director": "Francis Ford Coppola",
+    "year": 1972,
+    "imageURL": "https://m.media-amazon.com/images/M/MV5BM2MyNjYxNmUtYTAwNi00MTYxLWJmNWYtYzZlODY3ZTk3OTFlXkEyXkFqcGdeQXVyNzkwMjQ5NzM@._V1_QL75_UX380_CR0,1,380,562_.jpg",
+    "rating": 9.2,
+    "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son."
+  },
+  {
+    "id": 3,
+    "title": "Inception",
+    "category": "Movie",
+    "genre": "Sci-Fi, Action, Thriller",
+    "director": "Christopher Nolan",
+    "year": 2010,
+    "imageURL": "https://m.media-amazon.com/images/M/MV5BMjAxMzY3NjcxNF5BMl5BanBnXkFtZTcwNTI5OTM0Mw@@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+    "rating": 8.8,
+    "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O."
+  },
+  {
+    "id": 4,
+    "title": "Spirited Away",
+    "category": "Animation",
+    "genre": "Fantasy, Adventure",
+    "director": "Hayao Miyazaki",
+    "year": 2001,
+    "imageURL": "https://m.media-amazon.com/images/M/MV5BMjlmZmI5MDctNDE2YS00YWE0LWE5ZWItZDBhYWQ0NTcxNWRhXkEyXkFqcGdeQXVyMTMxODk2OTU@._V1_QL75_UX380_CR0,0,380,562_.jpg",
+    "rating": 8.6,
+    "description": "During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, where humans are changed into beasts."
+  },
+  {
+    "id": 5,
+    "title": "Parasite",
+    "category": "Movie",
+    "genre": "Thriller, Comedy, Drama",
+    "director": "Bong Joon Ho",
+    "year": 2019,
+    "imageURL": "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_QL75_UY562_CR9,0,380,562_.jpg",
+    "rating": 8.5,
+    "description": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan."
+  }
+]
