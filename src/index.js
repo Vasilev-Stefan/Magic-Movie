@@ -30,21 +30,21 @@ app.get('/', (req, res) => {
 })
 
 app.get('/about', (req, res) => {
-    res.send('About page')
+    res.render('about')
     //TODO - render the about page.
 })
 
 app.get('/create', (req, res) => {
-    res.send('Create page')
+    res.render('create')
     //TODO - render the create page.
 })
 
 app.get('/details/:id', (req, res) => {
-    res.send(`Details page for ID -> ${req.params.id}`)
+    res.render(`details`)
     //TODO - render the details page with conditional data
 })
 
 app.all('/*splat', (req, res) => {
-    res.send('Page not found')
+    res.render('404')
     //TODO - render the 404 page
 })
