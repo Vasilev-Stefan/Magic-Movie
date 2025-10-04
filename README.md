@@ -15,13 +15,13 @@ Softuni JS web project
  - [x] Add home controller
  - [x] Add movie data layer
  - [x] Add movie service
- - [ ] Render movies on home page
- - [ ] Show no movies screen
+ - [x] Render movies on home page
+ - [x] Show no movies screen
 ### Create Movie
- - [ ] Add Movie Controller
- - [ ] Show create movie page
- - [ ] Add routes
- - [ ] Add 404 page
+ - [x] Add Movie Controller
+ - [x] Show create movie page
+ - [x] Add routes
+ - [x] Add 404 page
  - [ ] Ready body data
  - [ ] Create movie
    - [ ] Add action

@@ -3,6 +3,7 @@ import handlebars from 'express-handlebars'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import homeController from './controllers/homeController.js'
+import movieController from './controllers/movieController.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -26,16 +27,9 @@ app.use(express.static(path.join(__dirname, 'static')))
 
 //Creating routes
 app.use(homeController);
+app.use('/movie', movieController)
 
-app.get('/create', (req, res) => {
-    res.render('create')
-    //TODO - render the create page.
-})
 
-app.get('/details/:id', (req, res) => {
-    res.render(`details`)
-    //TODO - render the details page with conditional data
-})
 
 app.all('/*splat', (req, res) => {
     res.render('404')
