@@ -2,7 +2,7 @@ import express from 'express'
 import handlebars from 'express-handlebars'
 import path from 'node:path'
 import { fileURLToPath } from 'node:url'
-import fs from 'fs/promises'
+import homeController from './controllers/homeController.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -25,15 +25,7 @@ app.use(express.static(path.join(__dirname, 'static')))
 
 
 //Creating routes
-app.get('/', async (req, res) => {
-    const movies = await getAllMovies()
-    res.render('home', {content: movies})
-})
-
-app.get('/about', (req, res) => {
-    res.render('about')
-    //TODO - render the about page.
-})
+app.use(homeController);
 
 app.get('/create', (req, res) => {
     res.render('create')
@@ -50,7 +42,5 @@ app.all('/*splat', (req, res) => {
     //TODO - render the 404 page
 })
 
-async function getAllMovies () {
-    const database = await fs.readFile('./config/database.json')
-    return JSON.parse(database)
-}
+
+
