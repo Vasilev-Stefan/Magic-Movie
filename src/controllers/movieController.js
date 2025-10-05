@@ -22,4 +22,8 @@ movieController.get('/details/:id', async (req, res) => {
     res.render(`details`, {movie, ratingToDisplay})
 })
 
+movieController.get('/search', (req, res) => {
+    res.render(`search`)
+})
+
 export default movieController;
