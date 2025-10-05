@@ -23,7 +23,7 @@ app.set('view engine', 'hbs')
 
 //Default css and image to be displayed
 app.use(express.static(path.join(__dirname, 'static')))
-
+app.use(express.urlencoded())
 
 //Creating routes
 app.use(homeController);

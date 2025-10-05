@@ -53,5 +53,27 @@
     "imageURL": "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_QL75_UY562_CR9,0,380,562_.jpg",
     "rating": 8.5,
     "description": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan."
+  },
+  {
+    "id": 1,
+    "title": "Back in action",
+    "category": "movie",
+    "genre": "Action",
+    "director": "Seth Gordon",
+    "year": "2025",
+    "imageURL": "https://m.media-amazon.com/images/M/MV5BZmVkMTJlZTQtNzY1ZS00OGQ3LTg5YTktNThlYWFlMjY1NTEyXkEyXkFqcGc@._V1_.jpg",
+    "rating": "5.9",
+    "description": "Former CIA spies Emily and Matt are pulled back into espionage after their secret identities are exposed."
+  },
+  {
+    "id": "47754d43-b771-4ad4-82dd-9bc520a7c9da",
+    "title": "Star Trek: Section 31",
+    "category": "movie",
+    "genre": "Science Fiction",
+    "director": "Olatunde Osunsanmi",
+    "year": "2025",
+    "imageURL": "https://jonathanhansen.ghost.io/content/images/size/w2000/2025/01/IMG_2636.jpeg",
+    "rating": "3.8",
+    "description": "In Star Trek: Section 31, Emperor Philippa Georgiou joins a secret division of Starfleet tasked with protecting the United Federation of Planets, and must face the sins of her past."
   }
 ]
