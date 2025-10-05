@@ -1,6 +1,6 @@
 [
   {
-    "id": 1,
+    "id": "1",
     "title": "The Shawshank Redemption",
     "category": "Movie",
     "genre": "Drama",
@@ -11,7 +11,7 @@
     "description": "Two imprisoned men bond over a number of years, finding solace and eventual redemption through acts of common decency."
   },
   {
-    "id": 2,
+    "id": "2",
     "title": "The Godfather",
     "category": "Movie",
     "genre": "Crime, Drama",
@@ -22,7 +22,7 @@
     "description": "The aging patriarch of an organized crime dynasty transfers control of his clandestine empire to his reluctant son."
   },
   {
-    "id": 3,
+    "id": "3",
     "title": "Inception",
     "category": "Movie",
     "genre": "Sci-Fi, Action, Thriller",
@@ -33,7 +33,7 @@
     "description": "A thief who steals corporate secrets through the use of dream-sharing technology is given the inverse task of planting an idea into the mind of a C.E.O."
   },
   {
-    "id": 4,
+    "id": "4",
     "title": "Spirited Away",
     "category": "Animation",
     "genre": "Fantasy, Adventure",
@@ -44,7 +44,7 @@
     "description": "During her family's move to the suburbs, a sullen 10-year-old girl wanders into a world ruled by gods, witches, and spirits, where humans are changed into beasts."
   },
   {
-    "id": 5,
+    "id": "5",
     "title": "Parasite",
     "category": "Movie",
     "genre": "Thriller, Comedy, Drama",
@@ -53,17 +53,6 @@
     "imageURL": "https://m.media-amazon.com/images/M/MV5BYWZjMjk3ZTItODQ2ZC00NTY5LWE0ZDYtZTI3MjcwN2Q5NTVkXkEyXkFqcGdeQXVyODk4OTc3MTY@._V1_QL75_UY562_CR9,0,380,562_.jpg",
     "rating": 8.5,
     "description": "Greed and class discrimination threaten the newly formed symbiotic relationship between the wealthy Park family and the destitute Kim clan."
-  },
-  {
-    "id": 1,
-    "title": "Back in action",
-    "category": "movie",
-    "genre": "Action",
-    "director": "Seth Gordon",
-    "year": "2025",
-    "imageURL": "https://m.media-amazon.com/images/M/MV5BZmVkMTJlZTQtNzY1ZS00OGQ3LTg5YTktNThlYWFlMjY1NTEyXkEyXkFqcGc@._V1_.jpg",
-    "rating": "5.9",
-    "description": "Former CIA spies Emily and Matt are pulled back into espionage after their secret identities are exposed."
   },
   {
     "id": "47754d43-b771-4ad4-82dd-9bc520a7c9da",
@@ -75,5 +64,16 @@
     "imageURL": "https://jonathanhansen.ghost.io/content/images/size/w2000/2025/01/IMG_2636.jpeg",
     "rating": "3.8",
     "description": "In Star Trek: Section 31, Emperor Philippa Georgiou joins a secret division of Starfleet tasked with protecting the United Federation of Planets, and must face the sins of her past."
+  },
+  {
+    "id": "4f06c8eb-0ff6-40e5-bffd-d0bb3c4415ef",
+    "title": "Love Hurts",
+    "category": "movie",
+    "genre": "Romantic",
+    "director": " Barra Grant",
+    "year": "2025",
+    "imageURL": "https://www.themoviedb.org/t/p/w500/2YKxwZMbbgwjvf9cDPgtFwyOdnJ.jpg",
+    "rating": "7",
+    "description": "A newly separated father has to learn how to date again with help from his teenage son who himself dreams of conquering one girl's heart."
   }
 ]

@@ -25,9 +25,19 @@ async function createMovie(data) {
     updateDB(movies);
 }
 
+async function getMovieById(id) {
+    const database = await fs.readFile('./config/database.json')
+    const movies = JSON.parse(database)
+    // console.log(movies)
+    // console.log(id)
+    const result = movies.filter(movie => movie.id === id)
+    return result
+}
+
 export const movieService = {
     getAllMovies,
-    createMovie
+    createMovie,
+    getMovieById
 }
 
 function updateDB(movies) {

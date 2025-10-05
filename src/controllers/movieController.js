@@ -13,8 +13,13 @@ movieController.post('/create', (req, res) => {
     res.redirect('/')
 })
 
-movieController.get('/details/:id', (req, res) => {
-    res.render(`details`)
+movieController.get('/details/:id', async (req, res) => {
+    const id = req.params.id
+    const result = await movieService.getMovieById(id)
+    const movie = result[0]
+    const rating = Math.trunc(Number(movie.rating))
+    const ratingToDisplay = '&#x2605;'.repeat(rating)
+    res.render(`details`, {movie, ratingToDisplay})
 })
 
 export default movieController;
