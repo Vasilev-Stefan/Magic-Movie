@@ -28,16 +28,35 @@ async function createMovie(data) {
 async function getMovieById(id) {
     const database = await fs.readFile('./config/database.json')
     const movies = JSON.parse(database)
-    // console.log(movies)
-    // console.log(id)
     const result = movies.filter(movie => movie.id === id)
     return result
+}
+
+async function filterMoviesBySearch (params) {
+    const database = await fs.readFile('./config/database.json');
+    const movies = await JSON.parse(database);
+    let result = movies.slice()
+
+    if(params.title){
+        result = result.filter(movie => movie.title.toLowerCase().includes(params.title.toLowerCase()))
+    }
+
+    if(params.genre){
+        result = result.filter(movie => movie.genre.toLowerCase().includes(params.genre.toLowerCase()))
+    }
+
+    if(params.year){
+        result = result.filter(movie => movie.year == params.year)
+    }
+
+    return result;
 }
 
 export const movieService = {
     getAllMovies,
     createMovie,
-    getMovieById
+    getMovieById,
+    filterMoviesBySearch
 }
 
 function updateDB(movies) {
