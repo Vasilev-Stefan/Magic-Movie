@@ -34,9 +34,8 @@ async function getMovieById(id) {
 }
 
 async function filterMoviesBySearch (params) {
-    const database = await fs.readFile('./config/database.json');
-    const movies = await JSON.parse(database);
-    let result = movies.slice()
+    const database = await Movie.find({}).lean();
+    let result = database.slice()
 
     if(params.title){
         result = result.filter(movie => movie.title.toLowerCase().includes(params.title.toLowerCase()))
