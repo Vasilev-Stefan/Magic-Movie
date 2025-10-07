@@ -4,6 +4,9 @@ import path from 'node:path'
 import { fileURLToPath } from 'node:url'
 import homeController from './controllers/homeController.js'
 import movieController from './controllers/movieController.js'
+import mongoose from 'mongoose'
+import Movie from '../config/models/Movie.js';
+import Cast from '../config/models/Cast.js';
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -35,6 +38,16 @@ app.all('/*splat', (req, res) => {
     res.render('404')
     //TODO - render the 404 page
 })
+
+const atlasURL = 'mongodb+srv://sbasilev_db_user:YQMbrqce7VzWmjAR@movies.owquz7p.mongodb.net/'
+
+try {
+    await mongoose.connect(atlasURL, { dbName: 'moviesDb' });
+
+    console.log('Database connected successfully');
+} catch (err) {
+    console.log('Cannot connect to database', err.message);
+}
 
 
 
