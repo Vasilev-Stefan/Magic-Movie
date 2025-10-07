@@ -1,6 +1,7 @@
 # Magic-Movie
 Softuni JS web project
 
+#### Workshop 1 - Express and Handlebards
 ### Setup
  - [x] Initialize Project
  - [x] Add Express Server `npm i express`
@@ -48,3 +49,19 @@ Softuni JS web project
  - [x] Dynamic page title
  - [x] Rating (temp solution)
  - [x] File Persistance
+
+#### Workshop 2 - MongoDB and Moongose
+### Setup
+- [x] Connect to database
+- [x] Create model for Movie
+- [x] Create model for Cast
+### Sync with moongose
+- [x] Sync the home page
+- [x] Sync the search page
+- [ ] Sync the details page
+
+
+
+
+
+
