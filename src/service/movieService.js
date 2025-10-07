@@ -1,10 +1,11 @@
 import fs from 'fs/promises'
 import { v4 as uuid} from 'uuid';
+import Movie from '../../config/models/Movie.js';
 
 
 async function getAllMovies () {
-    const database = await fs.readFile('./config/database.json')
-return JSON.parse(database)
+    const database = await Movie.find({}).lean()
+    return database
 }
 
 async function createMovie(data) {
