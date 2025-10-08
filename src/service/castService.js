@@ -7,4 +7,5 @@ async function createCast(data) {
 
 export const castServer = {
     createCast,
+    getAllCast
 }
