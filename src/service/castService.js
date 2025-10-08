@@ -5,6 +5,11 @@ async function createCast(data) {
     console.log(createCast)
 }
 
+async function getAllCast() {
+    const cast = await Cast.find().lean()
+    return cast
+}
+
 export const castServer = {
     createCast,
     getAllCast
