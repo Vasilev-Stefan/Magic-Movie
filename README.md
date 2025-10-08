@@ -60,7 +60,7 @@ Softuni JS web project
 - [x] Sync the home page
 - [x] Sync the search page
 - [X] Sync the details page
-- [ ] Add the ability to create movie to the new db
+- [x] Add the ability to create movie to the new db
 ### Updating details apge
 - [x] Add new static page
 - [x] Add action to the page

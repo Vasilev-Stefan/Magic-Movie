@@ -7,9 +7,9 @@ movieController.get('/create', (req, res) => {
     res.render('create', {pageTitle: 'Create Movie'})
 })
 
-movieController.post('/create', (req, res) => {
+movieController.post('/create', async (req, res) => {
     console.log(req.body)
-    movieService.createMovie(req.body)
+    await movieService.createMovie(req.body)
     res.redirect('/')
 })
 
