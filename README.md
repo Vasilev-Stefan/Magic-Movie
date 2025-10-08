@@ -58,7 +58,14 @@ Softuni JS web project
 ### Sync with moongose
 - [x] Sync the home page
 - [x] Sync the search page
-- [ ] Sync the details page
+- [X] Sync the details page
+### Updating details apge
+- [x] Add new static page
+- [ ] Add action to the page
+### Add Cast page and sections
+- [x] Add static cast section to details page
+
+
 
 
 
