@@ -1,4 +1,5 @@
 import Movie from '../../config/models/Movie.js';
+import mongoose from 'mongoose';
 
 
 async function getAllMovies () {
@@ -35,9 +36,19 @@ async function filterMoviesBySearch (params) {
     return result;
 }
 
+async function addCast(id, data) {
+   const updatedMovie = await Movie.updateOne({_id: id}, {
+    $push: {
+        cast: data.cast
+    }
+   })
+   return updatedMovie
+}
+
 export const movieService = {
     getAllMovies,
     createMovie,
     getMovieById,
-    filterMoviesBySearch
+    filterMoviesBySearch,
+    addCast
 }

@@ -16,9 +16,16 @@ castController.post('/create', async (req, res) => {
 castController.get('/attach/:id', async (req, res) => {
     const id = req.params.id
     const cast = await castServer.getAllCast()
-    console.log(cast)
+    // console.log(cast)
     const movie = await movieService.getMovieById(id)
     res.render('castAttach', {pageTitle: 'Attach Cast', movie, cast})
+})
+
+castController.post('/attach/:id', async (req, res) => {
+    const id = req.params.id
+    const data = req.body
+    const updatedMovie = movieService.addCast(id, data)
+    res.redirect(`/cast/attach/${id}`)
 })
 
 export default castController;

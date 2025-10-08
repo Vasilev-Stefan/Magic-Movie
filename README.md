@@ -73,9 +73,9 @@ Softuni JS web project
 ### Add Attach Cast page
 - [x] Add static page for attach cast
 - [x] Add dynamic movie data
-- [ ] Add dynamic cast data
-- [ ] Add action
-- [ ] Sync added cast to movie
+- [x] Add dynamic cast data
+- [x] Add action
+- [x] Sync added cast to movie
 
 
 
