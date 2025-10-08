@@ -37,6 +37,13 @@ async function filterMoviesBySearch (params) {
 }
 
 async function addCast(id, data) {
+    const movie = await Movie.findById(id)
+
+    if(movie.cast.includes(data.cast)){
+        console.log('This cast has been already added')
+        return
+    }
+
    const updatedMovie = await Movie.updateOne({_id: id}, {
     $push: {
         cast: data.cast
