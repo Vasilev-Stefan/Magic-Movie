@@ -1,5 +1,3 @@
-import fs from 'fs/promises'
-import { v4 as uuid} from 'uuid';
 import Movie from '../../config/models/Movie.js';
 
 
@@ -42,8 +40,4 @@ export const movieService = {
     createMovie,
     getMovieById,
     filterMoviesBySearch
-}
-
-function updateDB(movies) {
-    fs.writeFile('./config/database.json', JSON.stringify(movies, null, 2))
 }

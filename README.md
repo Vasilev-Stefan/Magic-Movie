@@ -69,7 +69,7 @@ Softuni JS web project
 - [x] Add routes for cast create
 - [x] Add create cast page  
 - [x] Add static cast section to details page
-- [ ] Add the ability to create cast
+- [x] Add the ability to create cast
 ### Add Attach Cast page
 - [x] Add static page for attach cast
 - [ ] Add dynamic movie data
