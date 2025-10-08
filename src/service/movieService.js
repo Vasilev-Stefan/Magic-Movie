@@ -27,10 +27,8 @@ async function createMovie(data) {
 }
 
 async function getMovieById(id) {
-    const database = await fs.readFile('./config/database.json')
-    const movies = JSON.parse(database)
-    const result = movies.filter(movie => movie.id === id)
-    return result
+    const movie = await Movie.findOne({_id: id}).lean()
+    return movie
 }
 
 async function filterMoviesBySearch (params) {
