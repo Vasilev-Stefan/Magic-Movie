@@ -2,6 +2,8 @@ import { Router } from "express";
 
 const castController = Router()
 
-castController.get('/cast/create', (req, res) => {
+castController.get('/create', (req, res) => {
     res.render('createCast', {pageTitle: 'Create Cast'})
 })
+
+export default castController;

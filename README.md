@@ -61,8 +61,10 @@ Softuni JS web project
 - [X] Sync the details page
 ### Updating details apge
 - [x] Add new static page
-- [ ] Add action to the page
+- [x] Add action to the page
 ### Add Cast page and sections
+- [x] Add routes for cast create
+- [x] Add create cast page  
 - [x] Add static cast section to details page
 
 

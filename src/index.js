@@ -7,6 +7,7 @@ import movieController from './controllers/movieController.js'
 import mongoose from 'mongoose'
 import Movie from '../config/models/Movie.js';
 import Cast from '../config/models/Cast.js';
+import castController from './controllers/castController.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -31,6 +32,7 @@ app.use(express.urlencoded())
 //Creating routes
 app.use(homeController);
 app.use('/movie', movieController)
+app.use('/cast', castController)
 
 
 
