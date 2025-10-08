@@ -9,21 +9,8 @@ async function getAllMovies () {
 }
 
 async function createMovie(data) {
-    const database = await fs.readFile('./config/database.json')
-    const movies = JSON.parse(database)
-    const newMovie = {
-        "id": uuid(),
-        "title": data.title,
-        "category": data.category,
-        "genre": data.genre,
-        "director": data.director,
-        "year": data.year,
-        "imageURL": data.imageURL,
-        "rating": data.rating,
-        "description": data.description
-    }
-    movies.push(newMovie);
-    updateDB(movies);
+    const createdMovie = Movie.create(data)
+    console.log(createMovie)
 }
 
 async function getMovieById(id) {
