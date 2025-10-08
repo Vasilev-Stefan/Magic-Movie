@@ -55,17 +55,24 @@ Softuni JS web project
 - [x] Connect to database
 - [x] Create model for Movie
 - [x] Create model for Cast
+- [x] Update static files
 ### Sync with moongose
 - [x] Sync the home page
 - [x] Sync the search page
 - [X] Sync the details page
+- [ ] Add the ability to create movie to the new db
 ### Updating details apge
 - [x] Add new static page
 - [x] Add action to the page
+- [ ] Add dynamic data for cast to details view
 ### Add Cast page and sections
 - [x] Add routes for cast create
 - [x] Add create cast page  
 - [x] Add static cast section to details page
+- [ ] Add the ability to create cast
+
+
+
 
 
 
