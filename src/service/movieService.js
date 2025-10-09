@@ -13,7 +13,7 @@ async function createMovie(data) {
 }
 
 async function getMovieById(id) {
-    const movie = await Movie.findOne({_id: id}).lean()
+    const movie = await Movie.findOne({_id: id}).populate('cast').lean()
     return movie
 }
 
