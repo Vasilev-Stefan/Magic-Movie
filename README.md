@@ -84,11 +84,65 @@ Softuni JS web project
 - [x] Install cookie-parser `npm i cookie-parser`
 
 ### Users model
-- [ ] Creat User model
+- [x] Creat User model
 - [ ] Creat a jsonwebtoken upon successful user creation
 
 ### Movie model
 - [x] Add creatorId property to the Movie model
+
+### Login page
+- [ ] Create login page
+- [ ] Add routes to login page
+- [ ] Add login button to navigation
+- [ ] Add action to login users
+
+### Register page
+- [ ] Create register page
+- [ ] Add routes to register page
+- [ ] Add register button to navigation
+- [ ] Add the action to create user
+
+### Logout
+- [ ] Add logout button to navigation
+
+### Details page
+- [ ] Add text 'There are no cast added yet...' if there are no casts attached
+- [ ] Add 'Edit' and 'Delete' buttons
+- [ ] Movie creators should see 'Edit' and 'Delete' buttons
+
+### Edit page
+- [ ] Create Edit page
+- [ ] Add routes to edit page
+- [ ] Display dynamic data on edit page
+- [ ] Add action to edit movie
+
+
+### Authorization
+- [ ] Update navigation on login and logout
+# Guests can access:
+- [ ] Home page
+- [ ] About page
+- [ ] Search page
+- [ ] Login page
+- [ ] Register page
+# Logged-in users can access:
+- [ ] Home page
+- [ ] About page
+- [ ] Search page
+- [ ] Details page
+- [ ] Create movie page
+- [ ] Create cast page
+- [ ] Attach cast page
+- [ ] Logout cast page
+
+
+
+
+
+
+
+
+
 
 
 
