@@ -77,6 +77,20 @@ Softuni JS web project
 - [x] Add action
 - [x] Sync added cast to movie
 
+#### Workshop 3 - User service
+### Setup
+- [x] Install jsonwebtoken `npm i jsonwebtoken`
+- [x] Install bcrypt `npm i bcrypt`
+- [x] Install cookie-parser `npm i cookie-parser`
+
+### Users model
+- [ ] Creat User model
+- [ ] Creat a jsonwebtoken upon successful user creation
+
+### Movie model
+- [x] Add creatorId property to the Movie model
+
+
 
 
 

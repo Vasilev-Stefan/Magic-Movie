@@ -9,7 +9,8 @@ const movieSchema = new mongoose.Schema({
     rating: {type: Number, required: true, max: [10, "The rating can't be higher than 10"], min: [1, "The rating can't be lower than 1"]},
     description: {type: String, required: true, maxLength: 200},
     imageURL: {type: String, required: true, validate: {validator: function (value) {return /^(https?)/.test(value)}, message: props => `${props.value} is not a valid URL. It must start with "http://" or "https://".`}},
-    cast: [{type: mongoose.Types.ObjectId, ref: 'Cast'}]
+    cast: [{type: mongoose.Types.ObjectId, ref: 'Cast'}],
+    creatorId: {type: mongoose.Types.ObjectId, ref: 'User'}
 })
 
 const Movie = mongoose.model('Movie', movieSchema)

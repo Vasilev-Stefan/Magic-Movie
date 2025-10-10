@@ -17,7 +17,6 @@ movieController.get('/details/:id', async (req, res) => {
     const id = req.params.id
     const movie = await movieService.getMovieById(id)
     const cast = movie.cast
-    console.log(cast)
     const rating = Math.trunc(Number(movie.rating))
     const ratingToDisplay = '&#x2605;'.repeat(rating)
     res.render(`details`, {movie, cast, ratingToDisplay, pageTitle: 'Details Page'})
