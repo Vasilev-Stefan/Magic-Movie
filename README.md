@@ -82,6 +82,9 @@ Softuni JS web project
 - [x] Install jsonwebtoken `npm i jsonwebtoken`
 - [x] Install bcrypt `npm i bcrypt`
 - [x] Install cookie-parser `npm i cookie-parser`
+- [x] Update navigation
+- [ ] Show dynamic navigation based on user or guest
+
 
 ### Users model
 - [x] Creat User model

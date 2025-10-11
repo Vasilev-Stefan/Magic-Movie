@@ -14,11 +14,20 @@
             <img src="/img/logo.webp" alt="logo">
 
             <ul class="menu">
-                <li><a href="/">Home</a></li>
-                <li><a href="/movie/create">Create Post</a></li>
-                <li><a href="/cast/create">Create Cast</a></li>
-                <li><a href="/movie/search">Search</a></li>
-                <li><a href="/about">About</a></li>
+                {{!-- <div id="main" class="menu"> --}}
+                    <li id="main"><a href="/">Home</a></li>
+                    <li id="main"><a href="/about">About</a></li>
+                    <li id="main"><a href="/movie/search">Search</a></li>
+                {{!-- </div> --}}
+                {{!-- <div id="user" class="menu"> --}}
+                    <li id="user"><a href="/movie/create">Create Post</a></li>
+                    <li id="user"><a href="/cast/create">Create Cast</a></li>
+                    <li id="user"><a href="/logout">Logout</a></li>
+                {{!-- </div> --}}
+                {{!-- <div id="guest" class="menu"> --}}
+                    <li id="guest"><a href="/log">Login</a></li>
+                    <li id="guest"><a href="/register">Register</a></li>
+                {{!-- </div> --}}
             </ul>
 
         </nav>
