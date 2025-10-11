@@ -105,7 +105,7 @@ Softuni JS web project
 - [x] Create register page
 - [x] Add routes to register page
 - [x] Add register button to navigation
-- [ ] Add the action to create user
+- [x] Add the action to create user
 
 ### Logout
 - [ ] Add logout button to navigation
