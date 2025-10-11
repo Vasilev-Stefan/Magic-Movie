@@ -10,6 +10,11 @@ async function registerUser(data) {
     const rePass = data.rePass
     const emailPattern = /^[a-z]+@{1}[a-z]+\.{1}[a-z]{2,}/
 
+    const user = {
+        email: data.email,
+        password: data.password
+    }
+
     //tests if email is valid
     if(!emailPattern.test(email)){
         console.log('This email is invalid!')
@@ -20,15 +25,6 @@ async function registerUser(data) {
     if(password !== rePass){
         console.log('Passwords does not match!')
         return
-    }
-
-    //Generating hashed password
-    const salt = await bcrypt.genSalt(10)
-    const hashPassword = await bcrypt.hash(password, salt) 
-
-    const user = {
-        email,
-        password: hashPassword
     }
 
     const createdUser = User.create(user)
@@ -52,6 +48,10 @@ function generateJWT(user) {
     return token;
 }
 
+function updatedNav() {
+
+}
+
 export const userService = {
-    registerUser
+    registerUser,
 }

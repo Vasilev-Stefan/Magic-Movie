@@ -90,7 +90,7 @@ Softuni JS web project
 
 ### Users model
 - [x] Creat User model
-- [ ] Creat a jsonwebtoken upon successful user creation
+- [x] Creat a jsonwebtoken upon successful user creation
 
 ### Movie model
 - [x] Add creatorId property to the Movie model
