@@ -1,5 +1,6 @@
 import { Router } from 'express';
 import { userService } from '../service/userService.js';
+import User from '../../config/models/User.js';
 
 const userController = Router()
 
@@ -7,16 +8,21 @@ userController.get('/login', (req, res) => {
     res.render('login', {pageTitle: 'Login'})
 })
 
+userController.post('/login', async (req, res) => {
+    const token = await userService.login(req.body)
+
+    res.cookie('auth', token)
+    
+    res.redirect('/')
+})
+
 userController.get('/register', (req, res) => {
     res.render('register', {pageTitle: 'Register'})
 })
 
-userController.post('/register', (req, res) => {
+userController.post('/register', async (req, res) => {
     const data = req.body
-    const token = userService.registerUser(data)
-
-    //attached JWT token to cookie
-    res.cookie('Authorization', token)
+    userService.registerUser(data)
     res.redirect('/')
 })
 

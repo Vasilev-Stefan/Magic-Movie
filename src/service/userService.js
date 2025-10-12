@@ -2,7 +2,28 @@ import User from '../../config/models/User.js'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
 
-const JWT_SECRET = 'secretMessaeg'
+const JWT_SECRET = '38fd19e62ced8a976274ed6c77fcd42d'
+
+async function login(data) {
+    const user = await User.findOne({ email: data.email })
+
+    if(!user){
+        throw new Error('Invalid email or password')
+    }
+
+    let isPasswordValid = await bcrypt.compare(data.password, user.password)
+    if(!isPasswordValid){
+        throw new Error('Invalid email or password')
+    }
+
+    const payload = {
+        id: user.id,
+        email: user.email,
+    }
+
+    const token = jwt.sign(payload, JWT_SECRET, {expiresIn: '2h'} )
+    return token
+}
 
 async function registerUser(data) {
     const email = data.email
@@ -28,30 +49,13 @@ async function registerUser(data) {
     }
 
     const createdUser = User.create(user)
-
-    //pass JWT token
-    const token = generateJWT(createdUser)
-
     console.log('User successfuly created')
-    return token
+    return
 }
 
-function generateJWT(user) {
 
-    const payload = {
-        id: user._id,
-        email: user.email
-    }
-
-    const token = jwt.sign(payload, JWT_SECRET, {expiresIn: '1h'})
-
-    return token;
-}
-
-function updatedNav() {
-
-}
 
 export const userService = {
     registerUser,
+    login
 }

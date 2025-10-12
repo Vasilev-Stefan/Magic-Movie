@@ -109,6 +109,7 @@ Softuni JS web project
 
 ### Logout
 - [ ] Add logout button to navigation
+- [ ] Add action to logout
 
 ### Details page
 - [ ] Add text 'There are no cast added yet...' if there are no casts attached
