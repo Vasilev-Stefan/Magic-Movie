@@ -1,8 +1,8 @@
 import User from '../../config/models/User.js'
 import bcrypt from 'bcrypt'
 import jwt from 'jsonwebtoken'
+import { JWT_SECRET } from '../../config/constants.js'
 
-const JWT_SECRET = '38fd19e62ced8a976274ed6c77fcd42d'
 
 async function login(data) {
     const user = await User.findOne({ email: data.email })

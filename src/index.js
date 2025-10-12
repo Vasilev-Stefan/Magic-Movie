@@ -9,6 +9,8 @@ import Movie from '../config/models/Movie.js';
 import Cast from '../config/models/Cast.js';
 import castController from './controllers/castController.js'
 import userController from './controllers/userController.js'
+import cookieParser from 'cookie-parser'
+import { authMiddleware } from './middlewares/authMiddleware.js'
 
 const __filename = fileURLToPath(import.meta.url)
 const __dirname = path.dirname(__filename)
@@ -29,6 +31,8 @@ app.set('view engine', 'hbs')
 //Default css and image to be displayed
 app.use(express.static(path.join(__dirname, 'static')))
 app.use(express.urlencoded())
+app.use(cookieParser())
+app.use(authMiddleware)
 
 //Creating routes
 app.use(homeController);

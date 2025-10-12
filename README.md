@@ -111,6 +111,10 @@ Softuni JS web project
 - [x] Add logout button to navigation
 - [x] Add action to logout
 
+### Authorization
+- [ ] Add auth middleware
+- [ ] Validate user authentication
+
 ### Details page
 - [ ] Add text 'There are no cast added yet...' if there are no casts attached
 - [ ] Add 'Edit' and 'Delete' buttons
