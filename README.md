@@ -99,7 +99,7 @@ Softuni JS web project
 - [x] Create login page
 - [x] Add routes to login page
 - [x] Add login button to navigation
-- [ ] Add action to login users
+- [x] Add action to login users
 
 ### Register page
 - [x] Create register page
@@ -108,8 +108,8 @@ Softuni JS web project
 - [x] Add the action to create user
 
 ### Logout
-- [ ] Add logout button to navigation
-- [ ] Add action to logout
+- [x] Add logout button to navigation
+- [x] Add action to logout
 
 ### Details page
 - [ ] Add text 'There are no cast added yet...' if there are no casts attached

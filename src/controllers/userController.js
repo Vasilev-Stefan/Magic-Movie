@@ -12,7 +12,7 @@ userController.post('/login', async (req, res) => {
     const token = await userService.login(req.body)
 
     res.cookie('auth', token)
-    
+
     res.redirect('/')
 })
 
@@ -23,7 +23,14 @@ userController.get('/register', (req, res) => {
 userController.post('/register', async (req, res) => {
     const data = req.body
     userService.registerUser(data)
+    res.redirect('/user/login')
+})
+
+userController.get('/logout', (req, res) => {
+    res.clearCookie('auth')
     res.redirect('/')
 })
+
+
 
 export default userController;

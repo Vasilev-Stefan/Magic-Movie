@@ -25,6 +25,7 @@ async function login(data) {
     return token
 }
 
+
 async function registerUser(data) {
     const email = data.email
     const password = data.password
@@ -57,5 +58,5 @@ async function registerUser(data) {
 
 export const userService = {
     registerUser,
-    login
+    login,
 }
