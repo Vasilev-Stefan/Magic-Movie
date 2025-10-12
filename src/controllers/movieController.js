@@ -4,11 +4,11 @@ import { isAuth } from "../middlewares/authMiddleware.js";
 
 const movieController = Router();
 
-movieController.get('/create', isAuth, (req, res) => {
+movieController.get('/create', (req, res) => {
     res.render('create', {pageTitle: 'Create Movie'})
 })
 
-movieController.post('/create', isAuth, async (req, res) => {
+movieController.post('/create', async (req, res) => {
     console.log(req.body)
     await movieService.createMovie(req.body)
     res.redirect('/')

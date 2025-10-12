@@ -86,7 +86,7 @@ Softuni JS web project
 
 ### Navigation
 - [x] Update navigation
-- [ ] Show dynamic navigation based on user or guest
+- [x] Show dynamic navigation based on user or guest
 
 ### Users model
 - [x] Creat User model
@@ -112,8 +112,8 @@ Softuni JS web project
 - [x] Add action to logout
 
 ### Authorization
-- [ ] Add auth middleware
-- [ ] Validate user authentication
+- [x] Add auth middleware
+- [x] Validate user authentication
 
 ### Details page
 - [ ] Add text 'There are no cast added yet...' if there are no casts attached

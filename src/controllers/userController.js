@@ -26,7 +26,7 @@ userController.post('/register', isGuest, async (req, res) => {
     res.redirect('/user/login')
 })
 
-userController.get('/logout', isAuth, (req, res) => {
+userController.get('/logout', (req, res) => {
     res.clearCookie('auth')
     res.redirect('/')
 })
