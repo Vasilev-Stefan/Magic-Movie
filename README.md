@@ -128,22 +128,8 @@ Softuni JS web project
 
 
 ### Authorization
-- [ ] Update navigation on login and logout
-# Guests can access:
-- [ ] Home page
-- [ ] About page
-- [ ] Search page
-- [ ] Login page
-- [ ] Register page
-# Logged-in users can access:
-- [ ] Home page
-- [ ] About page
-- [ ] Search page
-- [ ] Details page
-- [ ] Create movie page
-- [ ] Create cast page
-- [ ] Attach cast page
-- [ ] Logout cast page
+- [x] Update navigation on login and logout
+
 
 
 
