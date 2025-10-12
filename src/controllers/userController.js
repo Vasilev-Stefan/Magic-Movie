@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { userService } from '../service/userService.js';
-import User from '../../config/models/User.js';
+import { isAuth, isGuest } from '../middlewares/authMiddleware.js';
 
 const userController = Router()
 
@@ -16,17 +16,17 @@ userController.post('/login', async (req, res) => {
     res.redirect('/')
 })
 
-userController.get('/register', (req, res) => {
+userController.get('/register', isGuest, (req, res) => {
     res.render('register', {pageTitle: 'Register'})
 })
 
-userController.post('/register', async (req, res) => {
+userController.post('/register', isGuest, async (req, res) => {
     const data = req.body
     userService.registerUser(data)
     res.redirect('/user/login')
 })
 
-userController.get('/logout', (req, res) => {
+userController.get('/logout', isAuth, (req, res) => {
     res.clearCookie('auth')
     res.redirect('/')
 })
