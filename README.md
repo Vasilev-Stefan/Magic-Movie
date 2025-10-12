@@ -121,8 +121,8 @@ Softuni JS web project
 - [ ] Movie creators should see 'Edit' and 'Delete' buttons
 
 ### Edit page
-- [ ] Create Edit page
-- [ ] Add routes to edit page
+- [x] Create Edit page
+- [x] Add routes to edit page
 - [ ] Display dynamic data on edit page
 - [ ] Add action to edit movie
 
