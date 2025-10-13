@@ -30,6 +30,14 @@ movieController.get('/edit/:id', async (req, res) => {
     res.render('edit', {movie, pageTitle: 'Edit Page'})
 })
 
+movieController.post('/edit/:id', async (req, res) => {
+    const id = req.params.id
+    const data = req.body
+    await movieService.updateOne(id, data)
+
+    res.redirect(`/movie/details/${id}`)
+})
+
 movieController.get('/search', async (req, res) => {
     const filter = req.query;
     const movies = await movieService.filterMoviesBySearch(filter);

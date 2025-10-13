@@ -52,10 +52,17 @@ async function addCast(id, data) {
    return updatedMovie
 }
 
+async function updateOne(id, data) {
+    console.log(id)
+    const updatedMovie = await Movie.findOneAndUpdate({_id: id}, data)
+    console.log(updatedMovie)
+}
+
 export const movieService = {
     getAllMovies,
     createMovie,
     getMovieById,
     filterMoviesBySearch,
-    addCast
+    addCast,
+    updateOne
 }
