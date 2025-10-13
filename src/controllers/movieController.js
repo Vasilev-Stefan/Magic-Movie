@@ -38,6 +38,12 @@ movieController.post('/edit/:id', async (req, res) => {
     res.redirect(`/movie/details/${id}`)
 })
 
+movieController.get('/delete/:id', async (req, res) => {
+    const id = req.params.id
+    await movieService.deleteMovie(id)
+    res.redirect('/')
+})
+
 movieController.get('/search', async (req, res) => {
     const filter = req.query;
     const movies = await movieService.filterMoviesBySearch(filter);

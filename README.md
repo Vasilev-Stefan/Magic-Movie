@@ -117,14 +117,14 @@ Softuni JS web project
 
 ### Details page
 - [ ] Add text 'There are no cast added yet...' if there are no casts attached
-- [ ] Add 'Edit' and 'Delete' buttons
+- [x] Add 'Edit' and 'Delete' buttons
 - [ ] Movie creators should see 'Edit' and 'Delete' buttons
 
 ### Edit page
 - [x] Create Edit page
 - [x] Add routes to edit page
-- [ ] Display dynamic data on edit page
-- [ ] Add action to edit movie
+- [x] Display dynamic data on edit page
+- [x] Add action to edit movie
 
 
 ### Authorization

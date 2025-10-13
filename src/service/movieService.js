@@ -58,11 +58,16 @@ async function updateOne(id, data) {
     console.log(updatedMovie)
 }
 
+async function deleteMovie(id) {
+    const deletedMovie = await Movie.deleteOne({_id: id})
+}
+
 export const movieService = {
     getAllMovies,
     createMovie,
     getMovieById,
     filterMoviesBySearch,
     addCast,
-    updateOne
+    updateOne,
+    deleteMovie
 }

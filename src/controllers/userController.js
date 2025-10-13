@@ -16,11 +16,11 @@ userController.post('/login', async (req, res) => {
     res.redirect('/')
 })
 
-userController.get('/register', isGuest, (req, res) => {
+userController.get('/register', (req, res) => {
     res.render('register', {pageTitle: 'Register'})
 })
 
-userController.post('/register', isGuest, async (req, res) => {
+userController.post('/register', async (req, res) => {
     const data = req.body
     userService.registerUser(data)
     res.redirect('/user/login')
