@@ -10,8 +10,22 @@ castController.get('/create', (req, res) => {
 })
 
 castController.post('/create', async (req, res) => {
-    await castServer.createCast(req.body)
-    res.redirect('/')
+    const data = req.body
+
+    try {
+        await castServer.createCast(req.body)
+        res.redirect('/')
+        
+    } catch (err) {
+        let errorMessage = 'Creating cast has failed'
+        if (err.errors) {
+            errorMessage = Object.values(err.errors).at(0).message
+        } else if (err.message) {
+            errorMessage = err.message
+        }
+
+        res.render('createCast', {pageTitle: 'Create Cast', error: errorMessage, data})
+    }
 })
 
 castController.get('/attach/:id', async (req, res) => {
