@@ -9,11 +9,17 @@ userController.get('/login', (req, res) => {
 })
 
 userController.post('/login', async (req, res) => {
-    const token = await userService.login(req.body)
 
-    res.cookie('auth', token)
+    try{
+        const token = await userService.login(req.body)
+        res.cookie('auth', token)
+        res.redirect('/')
+        
+    }catch(err){
+            res.render('login', {pageTitle: 'Login', error: err.message})
+    }
 
-    res.redirect('/')
+
 })
 
 userController.get('/register', (req, res) => {
@@ -22,8 +28,19 @@ userController.get('/register', (req, res) => {
 
 userController.post('/register', async (req, res) => {
     const data = req.body
-    userService.registerUser(data)
-    res.redirect('/user/login')
+    try {
+        await userService.registerUser(data)
+        res.redirect('/user/login')
+    } catch (err) {
+        let errorMessage = 'Registration failed'
+        if (err.errors) {
+            errorMessage = Object.values(err.errors).at(0).message
+        } else if (err.message) {
+            errorMessage = err.message
+        }
+
+        res.render('register', {pageTitle: 'Register', error: errorMessage})
+    }
 })
 
 userController.get('/logout', (req, res) => {

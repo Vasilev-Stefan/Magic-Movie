@@ -33,23 +33,22 @@ async function registerUser(data) {
     const emailPattern = /^[a-z]+@{1}[a-z]+\.{1}[a-z]{2,}/
 
     const user = {
-        email: data.email,
-        password: data.password
+        email,
+        password
     }
 
     //tests if email is valid
-    if(!emailPattern.test(email)){
-        console.log('This email is invalid!')
-        return
-    }
+    // if(!emailPattern.test(email)){
+    //     console.log('This email is invalid!')
+    //     return
+    // }
 
     //tests if rePass matches password
     if(password !== rePass){
-        console.log('Passwords does not match!')
-        return
+        throw new Error('Passwords does not match!')
     }
 
-    const createdUser = User.create(user)
+    const createdUser = await User.create(user)
     console.log('User successfuly created')
     return
 }
