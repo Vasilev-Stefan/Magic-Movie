@@ -46,9 +46,22 @@ movieController.get('/edit/:id', async (req, res) => {
 movieController.post('/edit/:id', async (req, res) => {
     const id = req.params.id
     const data = req.body
-    await movieService.updateOne(id, data)
 
-    res.redirect(`/movie/details/${id}`)
+    try {
+        await movieService.updateOne(id, data)
+        res.redirect(`/movie/details/${id}`)
+        
+    } catch (err) {
+        let errorMessage = 'Editing a movie has failed'
+        if(err.errors){
+            errorMessage = Object.values(err.errors).at(0).message
+        }else if(err.message){
+            errorMessage = err.message
+        }
+
+        res.render('edit', {pageTitle: 'Edit Page', error: errorMessage, data})
+    }
+
 })
 
 movieController.get('/delete/:id', async (req, res) => {

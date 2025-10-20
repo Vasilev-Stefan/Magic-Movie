@@ -47,14 +47,17 @@ async function addCast(id, data) {
     $push: {
         cast: data.cast
     }
+   },{
+    runValidators: true
    })
    return updatedMovie
 }
 
 async function updateOne(id, data) {
     console.log(id)
-    const updatedMovie = await Movie.findOneAndUpdate({_id: id}, data)
-    console.log(updatedMovie)
+    const updatedMovie = await Movie.findOneAndUpdate({_id: id}, data, {
+        runValidators: true
+    })
 }
 
 async function deleteMovie(id) {
