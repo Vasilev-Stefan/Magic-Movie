@@ -8,8 +8,7 @@ async function getAllMovies () {
 }
 
 async function createMovie(data) {
-    const createdMovie = Movie.create(data)
-    console.log(createMovie)
+    const createdMovie = await Movie.create(data)
 }
 
 async function getMovieById(id) {

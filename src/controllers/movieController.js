@@ -9,9 +9,22 @@ movieController.get('/create', (req, res) => {
 })
 
 movieController.post('/create', async (req, res) => {
-    console.log(req.body)
-    await movieService.createMovie(req.body)
-    res.redirect('/')
+    const data = req.body;
+
+    try {
+        await movieService.createMovie(req.body)
+        res.redirect('/')
+        
+    } catch (err) {
+        let errorMessage = 'Movie creation has failed'
+        if(err.errors){
+            errorMessage = Object.values(err.errors).at(0).message
+        } else if(err.message){
+            errorMessage = err.message
+        }
+
+        res.render('create', {pageTitle: 'Create Movie', error: errorMessage, data})
+    }
 })
 
 movieController.get('/details/:id', async (req, res) => {

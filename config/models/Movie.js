@@ -7,7 +7,7 @@ const movieSchema = new mongoose.Schema({
         minLength: [5, 'The title must be more than 4 charachers long'],
         match: [/[a-zA-Z0-9\ ]+/, 'Invalid charachers in the title of the movie']
     },
-    category: {type: String, required: true},
+    category: {type: String, required: [true, 'Category is required']},
     genre: {
         type: String,
         required: [true, 'Genre is required'],
