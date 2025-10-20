@@ -39,7 +39,7 @@ userController.post('/register', async (req, res) => {
             errorMessage = err.message
         }
 
-        res.render('register', {pageTitle: 'Register', error: errorMessage})
+        res.render('register', {pageTitle: 'Register', error: errorMessage, data})
     }
 })
 
