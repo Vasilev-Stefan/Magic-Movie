@@ -9,14 +9,15 @@ userController.get('/login', (req, res) => {
 })
 
 userController.post('/login', async (req, res) => {
-
+    const data = req.body
     try{
+        
         const token = await userService.login(req.body)
         res.cookie('auth', token)
         res.redirect('/')
         
     }catch(err){
-            res.render('login', {pageTitle: 'Login', error: err.message})
+            res.render('login', {pageTitle: 'Login', error: err.message, data})
     }
 
 
